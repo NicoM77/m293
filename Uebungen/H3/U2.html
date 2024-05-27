@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demographische Datenerhebung</title>
+    <link rel="stylesheet" href="U2.css">
+</head>
+<body>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Demographische Daten</legend>
+            <div class="form-group">
+                <label for="alter">Alter:</label>
+                <input type="number" id="alter" name="alter" min="0" max="120"><br>
+                <label for="geschlecht">Geschlecht:</label>
+                <select id="geschlecht" name="geschlecht">
+                    <option value="männlich">Männlich</option>
+                    <option value="weiblich">Weiblich</option>
+                    <option value="divers">Divers</option>
+                    <option value="keine Angabe">Keine Angabe</option>
+                </select><br>
+                <label for="bildung">Höchster Bildungsabschluss:</label>
+                <select id="bildung" name="bildung">
+                    <optgroup label="Schulabschlüsse">
+                        <option value="kein Abschluss">Kein Abschluss</option>
+                        <option value="Hauptschule">Hauptschule</option>
+                        <option value="Realschule">Realschule</option>
+                        <option value="Gymnasium">Gymnasium</option>
+                    </optgroup>
+                    <optgroup label="Hochschulabschlüsse">
+                        <option value="Bachelor">Bachelor</option>
+                        <option value="Master">Master</option>
+                        <option value="Doktor">Doktor</option>
+                    </optgroup>
+                </select><br>
+            </div>
+        </fieldset>
+
+        <input type="submit" value="Absenden">
+    </form>
+</body>
+</html>
