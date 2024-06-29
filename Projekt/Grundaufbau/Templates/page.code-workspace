@@ -1,0 +1,21 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+	],
+	"settings": {
+		"files.exclude": {
+			"__pycache__": true,
+			"**/*.code-workspace": true,
+			"**/*.gitignore": true,
+			"**/*.min.*": true,
+			"**/bootstrap.css": true,
+			"**/font": true,
+			"**/scripts.js": true,
+			"**/static/styles.css": true,
+			"**/swiperjs.css": true
+		}
+
+	}
+}

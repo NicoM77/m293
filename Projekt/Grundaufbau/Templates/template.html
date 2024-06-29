@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/styles.css" media="screen">
+    <style>
+        body {
+            margin: 0;
+            font-family: "IBM Plex Mono", monospace;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .c-navbar {
+            background-color: #813de1;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+
+            * {
+                align-content: center;
+            }
+
+            .c-navbar__logo {
+                padding: 0 32px;
+                background-color: #49208f;
+                font-weight: 700;
+                font-size: 28px;
+                width: 20vw;
+            }
+
+            .c-navbar__login {
+                padding: 0 32px;
+                display: flex;
+                flex-direction: row;
+                font-weight: 700;
+                font-size: 28px;
+                gap: 8px;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+
+                img {
+                    aspect-ratio: 1/1;
+                    height: 50%;
+                    margin: auto 0;
+                }
+            }
+        }
+
+        .c-container {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: calc(100vh - 80px);
+            overflow: hidden;
+        }
+
+        .c-sidebar {
+            transition: all 0.5s ease;
+            position: absolute;
+            background-color: black;
+            width: 20%;
+            height: calc(100vh - 80px);
+            overflow: hidden;
+            top: 0;
+            padding: 0 32px;
+            left: 0;
+            z-index: 3;
+
+            @media (max-width: 768px) {
+                left: -20vw;
+                padding: 0
+            }
+            .c-sidebar__element{
+                
+            }
+        }
+
+        .c-sidebar--show {
+            padding: 0 32px !important;
+            left: 0 !important;
+        }
+
+        .c-content {
+            margin-left: auto;
+            overflow-y: auto;
+            background-color: #14151c;
+            width: calc(80% - 64px);
+            height: calc(100vh - 80px);
+
+            @media (max-width: 768px) {
+                width: 100%;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="c-navbar">
+        <div class="c-navbar__logo">
+            Stoneblock Hosting
+        </div>
+        <div class="c-navbar__login">
+            <img src="user.png"><a href="/login">Login</a>
+        </div>
+    </nav>
+    <div class="c-container">
+        <div id="sidebar" class="c-sidebar">
+            <div class="c-sidebar__element"></div>
+        </div>
+        <div class="c-content">
+        </div>
+
+</body>
+
+</html>
